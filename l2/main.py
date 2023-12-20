@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 
 from matplotlib.animation import FuncAnimation
 
+
 circle_radius = 0.75
 
 def draw_circle(X, Y):
