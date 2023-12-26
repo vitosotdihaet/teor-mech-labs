@@ -49,7 +49,7 @@ C_velocity = (C_x_velocity**2 + C_y_velocity**2)**0.5
 C_acceleration = (sympy.diff(C_x_velocity, t)**2 + sympy.diff(C_y_velocity, t)**2)**0.5
 
 
-iterations = 1000
+iterations = 500
 T = numpy.linspace(0, 2*math.pi, num=iterations)
 
 XO = numpy.zeros_like(T)
@@ -80,33 +80,8 @@ for i in numpy.arange(iterations):
 fig = plt.figure()
 
 ax1 = fig.add_subplot(1, 1, 1)
-# ax1 = fig.add_subplot(1, 2, 1)
 ax1.axis('equal')
 ax1.set(xlim=[-10, 10], ylim=[-10, 10])
-
-# ax2 = fig.add_subplot(4, 2, 2)
-# ax2.plot(T, VA)
-
-# ax2.set_xlabel('T')
-# ax2.set_ylabel('velocity of A')
-
-# ax3 = fig.add_subplot(4, 2, 4)
-# ax3.plot(T, WA)
-
-# ax3.set_xlabel('T')
-# ax3.set_ylabel('acceleration of A')
-
-# ax4 = fig.add_subplot(4, 2, 6)
-# ax4.plot(T, VC)
-
-# ax4.set_xlabel('T')
-# ax4.set_ylabel('velocity of C')
-
-# ax5 = fig.add_subplot(4, 2, 8)
-# ax5.plot(T, WC)
-
-# ax5.set_xlabel('T')
-# ax5.set_ylabel('acceleration of C')
 
 beam1, = ax1.plot([-4, -4 + XA[0]], [0, YA[0]], 'black')
 beam2, = ax1.plot([4, 4 + XA[0]], [0, YA[0]], 'black')
